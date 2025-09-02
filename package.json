@@ -1,0 +1,122 @@
+{
+  "name": "@taskmaster/templates",
+  "version": "1.0.0",
+  "description": "Reusable templates and boilerplate code for creating task management applications similar to the TaskMaster Raycast extension",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./types": {
+      "import": "./configs/types.js",
+      "types": "./configs/types.d.ts"
+    },
+    "./config": {
+      "import": "./configs/config.js",
+      "types": "./configs/config.d.ts"
+    },
+    "./hooks": {
+      "import": "./hooks/index.js",
+      "types": "./hooks/index.d.ts"
+    },
+    "./components": {
+      "import": "./components/index.js",
+      "types": "./components/index.d.ts"
+    },
+    "./utils": {
+      "import": "./utils/index.js",
+      "types": "./utils/index.d.ts"
+    },
+    "./basic-task-manager": {
+      "import": "./basic-task-manager/index.js",
+      "types": "./basic-task-manager/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/",
+    "configs/",
+    "hooks/",
+    "components/",
+    "utils/",
+    "basic-task-manager/",
+    "docs/",
+    "README.md",
+    "TEMPLATE_SUMMARY.md",
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rm -rf dist/",
+    "dev": "tsc --watch",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "validate": "npm run typecheck && npm run lint && npm run test",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run validate"
+  },
+  "keywords": [
+    "taskmaster",
+    "task-management",
+    "templates",
+    "boilerplate",
+    "raycast",
+    "typescript",
+    "react",
+    "hooks",
+    "components"
+  ],
+  "author": "TaskMaster Templates",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taskmaster/templates.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taskmaster/templates/issues"
+  },
+  "homepage": "https://github.com/taskmaster/templates#readme",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "@raycast/api": ">=1.0.0",
+    "@raycast/utils": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@raycast/api": {
+      "optional": true
+    },
+    "@raycast/utils": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/node": "^20.0.0",
+    "@types/jest": "^29.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "jest": "^29.0.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  },
+  "optionalDependencies": {
+    "@raycast/api": "^1.0.0",
+    "@raycast/utils": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
